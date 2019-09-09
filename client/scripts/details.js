@@ -7,13 +7,13 @@ $(function () {
     let obj;
 
     // Get information with the Team Id of the selected team.
-    $.getJSON("api/teams/" + TeamId, function (data) {
+    $.getJSON("http://localhost:8081/api/teams/" + TeamId, function (data) {
         obj = data;
         teamDetails(obj)
         playersDetails(obj, TeamId)
-        $("#registerButton").attr("href", "register.html?TeamId=" + TeamId);
+        $("#registerButton").attr("href", "register.php?TeamId=" + TeamId);
         $("#registerButton").on("click", function () {
-            document.location.href = "register.html?TeamId=" + TeamId;
+            document.location.href = "register.php?TeamId=" + TeamId;
         });
     });
 
@@ -50,7 +50,7 @@ function playersDetails(obj, TeamId) {
     for (let i = 0; i < obj.Members.length; i++)
     {
         // Table body for students
-        let uri = "deleteplayer.html?TeamId=" + TeamId +"&membername=" + obj.Members[i].MemberName +"&email=" + obj.Members[i].Email+"&TeamName="+obj.TeamName+"&MemberId="+obj.Members[i].MemberId;
+        let uri = "deleteplayer.php?TeamId=" + TeamId +"&membername=" + obj.Members[i].MemberName +"&email=" + obj.Members[i].Email+"&TeamName="+obj.TeamName+"&MemberId="+obj.Members[i].MemberId;
         uri = encodeURI(uri);
         // Create table 
         let players = `<tr>

@@ -9,7 +9,7 @@ $(function () {
     let objs;
 
     // Get team name from api teams to generate in form 
-    $.getJSON("api/teams/" + teamId, function (data) {
+    $.getJSON("http://localhost:8081/api/teams/" + teamId, function (data) {
 
         objs = data;
         // Populate information 
@@ -35,8 +35,8 @@ $(function () {
             return;
         }
         // If data is entered post in the players table  
-        $.post(`/api/teams/${teamId}/members`, $("#newPlayer").serialize(), function (data) {
-            window.location.href = "details.html?TeamId=" + teamId;
+        $.post(`http://localhost:8081/api/teams/${teamId}/members`, $("#newPlayer").serialize(), function (data) {
+            window.location.href = "details.php?TeamId=" + teamId;
         })
 
     }); // end of on click
@@ -57,7 +57,7 @@ $(function () {
     // Reset button on click event. 
     $("#returnBtn").on("click", function () {
 
-        window.location.href = "details.html?TeamId=" + teamId;
+        window.location.href = "details.php?TeamId=" + teamId;
     });
 }); // end of ready fuction
 

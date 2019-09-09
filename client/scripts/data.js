@@ -4,7 +4,7 @@
 // Function to populate dropdown for leagues 
 let objs;
 function loadLeagueIntoDropdown(dropdownid) {
-    $.getJSON('/api/leagues', function (data) {
+    $.getJSON('http://localhost:8081/api/leagues', function (data) {
 
         objs = data;
         // Create my dropdown information from api/leagues
