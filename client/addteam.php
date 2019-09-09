@@ -1,22 +1,14 @@
 <!doctype html>
 <html lang="en">
 
-<?php
-    $title = "Add";
-  ?>
+ <?php $title = "Add";?>
+ <head> 
   <?php include("inc/head.php"); ?>
+</head>
 
 <body>
     <!-- Navbar -->
-    <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
-        <img src="images/logo.jpg" alt="logo">
-        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.php">Soccer
-            Academy</a>
-        <div class="my-2 my-md-0 mr-md ">
-            <a class="p-3 navLinks" href="index.php">Home</a>
-            <a class="p-3 navLinks" href="Leagues.php">Leagues</a>
-        </div>
-    </nav>
+    <?php include("inc/nav.php"); ?>
     <main>
         <section class="container col-md-5 formBorder mt-2">
             <h1 class="mb-3 text-center filterTitle">Add New Team</h1>
