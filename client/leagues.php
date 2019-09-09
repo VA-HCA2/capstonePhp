@@ -4,7 +4,9 @@
 <?php
     $title = "Leagues";
   ?>
+<head>
   <?php include("inc/head.php"); ?>
+</head>  
 <body>
     <!-- Navbar -->
     <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
