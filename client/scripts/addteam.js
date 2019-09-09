@@ -68,10 +68,10 @@ $(function () {
 
     // If data passes validation post new team 
 
-        $.post("/api/teams", $("#newTeam").serialize(), function (data) {
+        $.post("http://localhost:8081/api/teams", $("#newTeam").serialize(), function (data) {
             data = JSON.parse(data);
     // Return to team details. 
-            location.href = "details.html?TeamId=" + data.TeamId;
+            location.href = "details.php?TeamId=" + data.TeamId;
         })
         .fail(function (xhr, status, error) {
     // Server error 

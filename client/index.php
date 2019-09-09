@@ -1,31 +1,19 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/favicon.jpg" />
-    <title>Soccer Academy</title>
-</head>
+<?php
+    $title = "Home";
+  ?>
+  <?php include("inc/head.php"); ?>
 
 <body>
     <!-- Navbar -->
     <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
         <img src="images/logo.jpg" alt="logo">
-        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.html">Soccer
+        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.php">Soccer
             Academy</a>
         <div class="my-2 my-md-0 mr-md ">
-            <a class="p-3 navLinks" href="index.html">Home</a>
-            <a class="p-3 navLinks" href="Leagues.html">Leagues</a>
+            <a class="p-3 navLinks" href="index.php">Home</a>
+            <a class="p-3 navLinks" href="Leagues.php">Leagues</a>
         </div>
     </nav>
     <main>
@@ -67,7 +55,7 @@
                         <img class="fourth-slide imgs" src="images/banner.jpg" alt="marketing banner soccer">
                         <div class="container ">
                             <div class="carousel-caption text-left">
-                                <p><a class="btn btn-lg btn-primary" href="leagues.html" role="button">Sign up today</a>
+                                <p><a class="btn btn-lg btn-primary" href="leagues.php" role="button">Sign up today</a>
                                 </p>
                             </div>
                         </div>
@@ -103,7 +91,7 @@
                         if you are an individual looking to play you can sign up for multi sessions or drop in, paying a
                         single play fee and we
                         will get you on a team.</p>
-                    <a class="btn btn-primary" href="leagues.html" role="button">Sign up today</a>
+                    <a class="btn btn-primary" href="leagues.php" role="button">Sign up today</a>
                 </div>
             </div>
 
@@ -118,7 +106,7 @@
                     <p>This league is designated for female all ages.This is a great way to meet new people, get fit,
                         have fun and dust off your soccer skiills, whether
                         you played in your youth, teen years or at college.</p>
-                    <a class="btn btn-primary" href="leagues.html" role="button">Sign up today</a>
+                    <a class="btn btn-primary" href="league.php" role="button">Sign up today</a>
                 </div>
             </div>
 
@@ -135,24 +123,15 @@
                         individual technical skills, including dribbling, passing, receiving, shooting, heading,
                         tackling and throw-ins, as well as individual decision making. The afternoon sessions are
                         dedicated to enhancing tactical awareness.</p>
-                    <a class="btn btn-primary" href="leagues.html" role="button">Sign up today</a>
+                    <a class="btn btn-primary" href="leagues.php" role="button">Sign up today</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer text-center">
-        The content of this page is for Educational purposes only. Images and Content have been colected from different
-        sites.
-    </footer>
+    <?php include("inc/footer.php"); ?>
     <!-- Optional JavaScript -->
+    <?php include("inc/scripts.php"); ?>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ $(function () {
   let checkMinAge=1000;
   let checkMaxAge=0;
 
-  $.getJSON("api/teams/" + TeamId, function (data) {
+  $.getJSON("http://localhost:8081/api/teams/" + TeamId, function (data) {
     teams = data;
     loadTeamData(teams);
     
@@ -48,12 +48,12 @@ $(function () {
     }
   // Edit if the values are correct 
     $.ajax({
-      url: '/api/teams',
+      url: 'http://localhost:8081/api/teams',
       data: $("#editTeam").serialize(),
       method: 'PUT',
       success: function () {
         alert("Updated");
-        window.location.href = "details.html?TeamId=" + TeamId;
+        window.location.href = "details.php?TeamId=" + TeamId;
       }
     });
   });
@@ -61,7 +61,7 @@ $(function () {
   // Return button click event 
   $("#returnBtn").on("click", function () {
 
-    window.location.href = "details.html?TeamId=" + TeamId;
+    window.location.href = "details.php?TeamId=" + TeamId;
   });
 
 }); // end of ready fuction

@@ -49,7 +49,7 @@ function getLeagues(leaguesObjs) {
     // Clear my table header and table body when user selects another league
     $("#teamTable").empty();
     $("#teamHeader").empty();
-    $.getJSON("/api/teams/byleague/" + $("#leaguesddl").val(), function (data) {
+    $.getJSON("http://localhost:8081/api/teams/byleague/" + $("#leaguesddl").val(), function (data) {
 
       leaguesObjs = data;
       // Call my create a header function
@@ -65,7 +65,7 @@ function getLeagues(leaguesObjs) {
 function getTeams(leaguesObjs) {
   let obj;
   // dropdown for teams 
-  $.getJSON("/api/teams", function (data) {
+  $.getJSON("http://localhost:8081/api/teams", function (data) {
     obj = data;
     // Create my dropdown information from api/leagues
     for (let i = 0; i < obj.length; i++) {
@@ -85,7 +85,7 @@ function getTeams(leaguesObjs) {
     $("#teamTable").empty();
     $("#teamHeader").empty();
 
-    $.getJSON("/api/teams/" + $("#teamddl").val(), function (data) {
+    $.getJSON("http://localhost:8081/api/teams/" + $("#teamddl").val(), function (data) {
 
       leaguesObjs = data;
 
@@ -93,8 +93,8 @@ function getTeams(leaguesObjs) {
       createHeader()
       //Table Body
       let str = "<tr><td>" + leaguesObjs.TeamName + "</td><td>" + leaguesObjs.ManagerName + "</td><td>"
-        + leaguesObjs.ManagerPhone + "</td><td>" + "<a href=details.html?TeamId=" + leaguesObjs.TeamId + ">Details<a>" + "</td><td>"
-        + "<a href=edit.html?TeamId=" + leaguesObjs.TeamId + ">Edit<a></td></tr>";
+        + leaguesObjs.ManagerPhone + "</td><td>" + "<a href=details.php?TeamId=" + leaguesObjs.TeamId + ">Details<a>" + "</td><td>"
+        + "<a href=edit.php?TeamId=" + leaguesObjs.TeamId + ">Edit<a></td></tr>";
 
       $("#teamTable").append(str);
 
@@ -109,7 +109,7 @@ function searchByGender(leaguesObjs) {
     $("#teamTable").empty();
     $("#teamHeader").empty();
 
-    $.getJSON("/api/teams/", function (data) {
+    $.getJSON("http://localhost:8081/api/teams/", function (data) {
       let leagues = data
       // Call my create a header function
       createHeader()
@@ -121,8 +121,8 @@ function searchByGender(leaguesObjs) {
 
           //Table Body
           let str = "<tr><td>" + leagues[i].TeamName + "</td><td>" + leagues[i].ManagerName + "</td><td>"
-            + leagues[i].ManagerPhone + "</td><td>" + "<a href=details.html?TeamId=" + leagues[i].TeamId + ">Details<a>" + "</td><td>"
-            + "<a href=edit.html?TeamId=" + leagues[i].TeamId + ">Edit<a></td></tr>";
+            + leagues[i].ManagerPhone + "</td><td>" + "<a href=details.php?TeamId=" + leagues[i].TeamId + ">Details<a>" + "</td><td>"
+            + "<a href=edit.php?TeamId=" + leagues[i].TeamId + ">Edit<a></td></tr>";
 
           $("#teamTable").append(str);
         }
@@ -138,7 +138,7 @@ function showAllFunction(leaguesObjs) {
     // Clear my table header and table 
     $("#teamTable").empty();
     $("#teamHeader").empty();
-    $.getJSON("/api/teams", function (data) {
+    $.getJSON("http://localhost:8081/api/teams", function (data) {
       leaguesObjs = data;
       // Call create header function
       createHeader()
@@ -163,8 +163,8 @@ function getTable(leaguesObjs) {
 
     //Table Body
     let str = "<tr><td>" + leaguesObjs[i].TeamName + "</td><td>" + leaguesObjs[i].ManagerName + "</td><td>"
-      + leaguesObjs[i].ManagerPhone + "</td><td>" + "<a href=details.html?TeamId=" + leaguesObjs[i].TeamId + ">Details<a>" + "</td><td>"
-      + "<a href=edit.html?TeamId=" + leaguesObjs[i].TeamId + ">Edit<a></td></tr>";
+      + leaguesObjs[i].ManagerPhone + "</td><td>" + "<a href=details.php?TeamId=" + leaguesObjs[i].TeamId + ">Details<a>" + "</td><td>"
+      + "<a href=edit.php?TeamId=" + leaguesObjs[i].TeamId + ">Edit<a></td></tr>";
 
     $("#teamTable").append(str);
   }

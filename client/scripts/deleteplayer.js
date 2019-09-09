@@ -19,15 +19,15 @@ $(function () {
   // Delete button click event 
   $("#deleteBtn").on("click", function () {
     $.ajax({
-      url: `/api/teams/${TeamId}/members/${memberid}`,
+      url: `http://localhost:8081/api/teams/${TeamId}/members/${memberid}`,
       method: 'Delete',
       success: function () {
-        window.location.href = "details.html?TeamId=" + TeamId;
+        window.location.href = "details.php?TeamId=" + TeamId;
       }
     })
   });
 // Retun button click event 
   $("#returnBtn").on("click", function () {
-    window.location.href = "details.html?TeamId=" + TeamId;
+    window.location.href = "details.php?TeamId=" + TeamId;
   });
 }); // end of ready fuction
